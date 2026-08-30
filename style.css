@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
-  --font-body: "Roboto-Blocked", "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Roboto-Blocked", "Helvetica Neue", Arial, sans-serif;
+--font-body: "Roboto", "Helvetica Neue", Arial, sans-serif;
+--font-display: "Roboto", "Helvetica Neue", Arial, sans-serif;
 
   /* Base sizing */
   --base-size: 1rem;
