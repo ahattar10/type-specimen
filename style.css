@@ -1,0 +1,54 @@
+:root {
+  /* Fonts */
+  --font-body: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+  /* Base sizing */
+  --base-size: 1rem;
+  --body-line-height: 1.6;
+  --display-line-height: 1.1;
+  --measure: 65ch;
+
+  /* Type scale (1.250 ratio) */
+  --text-sm: 0.8rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 3.052rem;
+
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-accent: #2563eb;
+  --color-border: #e5e7eb;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--base-size);
+  line-height: var(--body-line-height);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: var(--space-lg);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: var(--display-line-height);
+  max-width: var(--measure);
+}
+
+p {
+  max-width: var(--measure);
+}
