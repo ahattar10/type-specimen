@@ -6,12 +6,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Type Specimen</title>
 </head>
 <body>
-   <h1>Type Specimen</h1>
+  <h1>Type Specimen</h1>
 
+  <!-- TYPE SCALE                     -->
+ 
   <section>
     <h2>Type Scale</h2>
 
@@ -41,7 +43,9 @@
     </div>
   </section>
 
-   <section>
+  <!-- COLOR PALETTE                  -->
+ 
+  <section>
     <h2>Color Palette</h2>
 
     <div>
@@ -70,6 +74,8 @@
     </div>
   </section>
 
+  <!-- SPACING SCALE                  -->
+  
   <section>
     <h2>Spacing Scale</h2>
 
@@ -104,6 +110,8 @@
     </div>
   </section>
 
+  <!-- BUTTONS                        -->
+
   <section>
     <h2>Buttons</h2>
 
@@ -131,8 +139,10 @@
       </div>
     </div>
   </section>
-
-   <section>
+ 
+  <!-- FORM ELEMENTS                  -->
+ 
+  <section>
     <h2>Form Elements</h2>
 
     <div>
@@ -170,7 +180,9 @@
     </div>
   </section>
 
-    <section>
+  <!-- CARDS                          -->
+  
+  <section>
     <h2>Cards</h2>
 
     <div class="card-grid">
@@ -204,6 +216,8 @@
     </div>
   </section>
 
+  <!-- ALERTS                         -->
+  
   <section>
     <h2>Alerts</h2>
 
@@ -236,6 +250,8 @@
     </div>
   </section>
 
+  <!-- BADGES                         -->
+ 
   <section>
     <h2>Badges</h2>
 
@@ -262,7 +278,9 @@
     </div>
   </section>
 
-   <section>
+  <!-- TABLES                         -->
+  >
+  <section>
     <h2>Tables</h2>
 
     <div>
@@ -301,34 +319,93 @@
     </div>
   </section>
 
+  <!-- ALPHABET SPECIMEN              -->
+
   <section>
-  <span class="label">Test Record</span>
-  <h2>Type System Test Results</h2>
+    <span class="label">Alphabet Specimen</span>
+    <h2>Full Alphabet</h2>
 
-  <p><strong>Test 1 — 320px viewport:</strong> Page rendered without horizontal overflow. Buttons stacked full-width via media query. Text remained legible at all scale levels. Metadata line wrapped cleanly. No clipping observed.</p>
+    <p class="text-md" style="letter-spacing: 0.05em; max-width: var(--measure);">
+      ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+      abcdefghijklmnopqrstuvwxyz<br>
+      0123456789 !@#$%^&*()_+-=[]{};':"\\|,./<>?
+    </p>
+  </section>
 
-  <p><strong>Test 2 — Wide viewport (1440px):</strong> Text measure held at 65ch via max-width token, preventing overly long line lengths. Hierarchy between heading, body, and metadata was preserved. No layout issues.</p>
+  <!-- LONG-FORM ARTICLE + METADATA   -->
 
-  <p><strong>Test 3 — 200% zoom on 320px (effective 160px width):</strong> Media query at 200px breakpoint further reduced font sizes and padding. Text remained readable. Buttons stayed full-width and tappable. No overflow or clipping.</p>
+  <section>
+    <span class="label">Long-Form Article</span>
+    <h2>The Craft of Typography</h2>
 
-  <p><strong>Test 4 — Font blocked (Roboto → Roboto-Blocked):</strong> Browser fell back to "Helvetica Neue", then Arial. Visual difference was minimal because a Network tab inspection revealed Roboto was never loading — no requests to fonts.googleapis.com or fonts.gstatic.com were made. The fallback stack (Helvetica Neue → Arial) was already in use for both the default and blocked states.</p>
-</section>
+    <p class="text-sm" style="color: var(--color-muted); margin-bottom: var(--space-md);">
+      By Jane Doe · Published August 30, 2026 · 6 min read
+    </p>
 
-<section>
-  <span class="label">Revision</span>
-  <h2>Evidence-Based Revision</h2>
+    <p style="max-width: var(--measure); line-height: var(--body-line-height); margin-bottom: var(--space-md);">
+      Typography is the art of arranging type to make written language legible, readable, and appealing when displayed. Whether you're designing a website, a book, or a poster, the choices you make about font family, size, line height, and spacing directly affect how your audience experiences the content. A well-designed type system establishes clear hierarchy, guides the reader's eye from heading to body, and maintains consistency across every page of a project.
+    </p>
 
-  <p><strong>Finding:</strong> During the fallback test (Phase 10), the default and blocked screenshots appeared identical. A Network tab inspection confirmed no font requests were being made to Google Fonts, meaning Roboto was never loading and the browser was relying on the fallback stack in both cases.</p>
+    <p style="max-width: var(--measure); line-height: var(--body-line-height); margin-bottom: var(--space-md);">
+      A critical but often overlooked aspect of typography is fallback behavior. When a preferred web font fails to load — whether due to a slow connection, a blocked request, or an unsupported format — the browser silently falls back to the next font in your stack. If that fallback is poorly chosen, line lengths shift, headings resize, and hierarchy can break down entirely. Testing with the preferred font blocked is the only way to know whether your system holds up under real-world conditions.
+    </p>
 
-  <p><strong>Revision:</strong> The fallback stack was confirmed to be functioning correctly (Helvetica Neue → Arial). The <code>--font-body</code> and <code>--font-display</code> tokens were restored to reference Roboto as the preferred font. No further changes to the stack were needed, as the fallback chain was already providing readable hierarchy. The responsive breakpoints (360px and 200px) were retained to handle 320px and 200% zoom scenarios.</p>
-</section>
+    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
+      <button class="btn btn-primary">Read Full Article</button>
+      <button class="btn btn-secondary">Save for Later</button>
+    </div>
+  </section>
+  
+  <!-- FONT SOURCE & LICENSING        -->
+  <section>
+    <span class="label">Font Source &amp; Licensing</span>
+    <h2>Font Documentation</h2>
 
-<section>
-  <span class="label">AI Disclosure</span>
-  <h2>AI Assistance Statement</h2>
+    <p><strong>Font family:</strong> Roboto</p>
+    <p><strong>Source URL:</strong> <code>https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap</code></p>
+    <p><strong>License:</strong> Apache License, Version 2.0 (open source, free for commercial use)</p>
+    <p><strong>License URL:</strong> <code>https://www.apache.org/licenses/LICENSE-2.0</code></p>
+    <p><strong>Available weights:</strong> 400 (regular), 700 (bold)</p>
+    <p><strong>Available styles:</strong> Normal (upright) — italic not loaded</p>
+    <p><strong>Service requests:</strong> Two preconnect calls to <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>, plus one CSS request and font file requests for the weights used</p>
+    <p><strong>Fallback stack:</strong> <code>Roboto, "Helvetica Neue", Arial, sans-serif</code></p>
+    <p><strong>Blocking method:</strong> Rename "Roboto" to "Roboto-Blocked" in the <code>--font-body</code> and <code>--font-display</code> tokens to simulate font failure</p>
+  </section>
 
-  <p>This project used AI assistance (ChatGPT) for guidance on HTML/CSS structure, design token organization, responsive breakpoint strategy, and debugging the font fallback test. All code was written and reviewed by the project author. The AI did not generate the final code directly — it provided explanations, suggestions, and troubleshooting support that the author implemented manually.</p>
-</section>
+  <!-- TEST RECORD                    -->
+  
+  <section>
+    <span class="label">Test Record</span>
+    <h2>Type System Test Results</h2>
+
+    <p><strong>Test 1 — 320px viewport:</strong> Page rendered without horizontal overflow. Buttons stacked full-width via media query. Text remained legible at all scale levels. Metadata line wrapped cleanly. No clipping observed.</p>
+
+    <p><strong>Test 2 — Wide viewport (1440px):</strong> Text measure held at 65ch via max-width token, preventing overly long line lengths. Hierarchy between heading, body, and metadata was preserved. No layout issues.</p>
+
+    <p><strong>Test 3 — 200% zoom on 320px (effective 160px width):</strong> Media query at 200px breakpoint further reduced font sizes and padding. Text remained readable. Buttons stayed full-width and tappable. No overflow or clipping.</p>
+
+    <p><strong>Test 4 — Font blocked (Roboto → Roboto-Blocked):</strong> Browser fell back to "Helvetica Neue", then Arial. Visual difference was minimal because a Network tab inspection revealed Roboto was never loading no requests to fonts.googleapis.com or fonts.gstatic.com were made. The fallback stack (Helvetica Neue → Arial) was already in use for both the default and blocked states.</p>
+  </section>
+  
+  <!-- EVIDENCE-BASED REVISION        -->
+  
+  <section>
+    <span class="label">Revision</span>
+    <h2>Evidence-Based Revision</h2>
+
+    <p><strong>Finding:</strong> During the fallback test (Phase 10), the default and blocked screenshots appeared identical. A Network tab inspection confirmed no font requests were being made to Google Fonts, meaning Roboto was never loading and the browser was relying on the fallback stack in both cases.</p>
+
+    <p><strong>Revision:</strong> The fallback stack was confirmed to be functioning correctly (Helvetica Neue → Arial). The <code>--font-body</code> and <code>--font-display</code> tokens were restored to reference Roboto as the preferred font. No further changes to the stack were needed, as the fallback chain was already providing readable hierarchy. The responsive breakpoints (360px and 200px) were retained to handle 320px and 200% zoom scenarios.</p>
+  </section>
+
+  <!-- AI DISCLOSURE                  -->
+ 
+  <section>
+    <span class="label">AI Disclosure</span>
+    <h2>AI Assistance Statement</h2>
+
+    <p>This project used AI assistance (ChatGPT) for guidance on HTML/CSS structure, design token organization, responsive breakpoint strategy, and debugging the font fallback test. All code was written and reviewed by the project author. The AI did not generate the final code directly — it provided explanations, suggestions, and troubleshooting support that the author implemented manually.</p>
+  </section>
 
 </body>
 </html>
