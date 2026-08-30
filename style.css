@@ -321,3 +321,40 @@ section div {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
 }
+
+.alert {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  max-width: 480px;
+}
+
+.alert strong {
+  font-weight: 700;
+}
+
+.alert-info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.alert-success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.alert-warning {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
