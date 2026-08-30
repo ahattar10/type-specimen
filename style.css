@@ -125,3 +125,34 @@ section div {
 .swatch-border {
   background-color: var(--color-border);
 }
+
+.spacer-bar {
+  height: 24px;
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.spacer-xs {
+  width: var(--space-xs);
+}
+
+.spacer-sm {
+  width: var(--space-sm);
+}
+
+.spacer-md {
+  width: var(--space-md);
+}
+
+.spacer-lg {
+  width: var(--space-lg);
+}
+
+.spacer-xl {
+  width: var(--space-xl);
+}
+
+.spacer-2xl {
+  width: var(--space-2xl);
+}
