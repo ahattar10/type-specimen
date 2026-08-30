@@ -52,3 +52,48 @@ h1 {
 p {
   max-width: var(--measure);
 }
+
+section {
+  margin-top: var(--space-xl);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: var(--display-line-height);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+}
+
+section div {
+  margin-bottom: var(--space-md);
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.text-md {
+  font-size: var(--text-md);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--display-line-height);
+}
