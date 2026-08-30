@@ -405,3 +405,34 @@ section div {
   background-color: #fee2e2;
   color: #991b1b;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-weight: 700;
+  background-color: #f9fafb;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+}
+
+.table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
