@@ -470,3 +470,46 @@ code {
 .table tbody tr:last-child td {
   border-bottom: none;
 }
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+@media (max-width: 360px) {
+  :root {
+    --text-2xl: 2.5rem;
+    --text-xl: 1.375rem;
+    --text-lg: 1.125rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+  }
+
+  body {
+    padding: var(--space-md);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 200px) {
+  :root {
+    --text-2xl: 2rem;
+    --text-xl: 1.25rem;
+    --text-md: 0.9rem;
+    --text-sm: 0.75rem;
+    --base-size: 0.9rem;
+    --space-lg: 1rem;
+    --space-xl: 1.5rem;
+  }
+
+  body {
+    padding: var(--space-sm);
+  }
+}

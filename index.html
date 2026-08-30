@@ -279,7 +279,7 @@
   </section>
 
   <!-- TABLES                         -->
-  >
+  
   <section>
     <h2>Tables</h2>
 
@@ -357,19 +357,25 @@
   </section>
   
   <!-- FONT SOURCE & LICENSING        -->
-  <section>
+     <section>
     <span class="label">Font Source &amp; Licensing</span>
     <h2>Font Documentation</h2>
 
     <p><strong>Font family:</strong> Roboto</p>
-    <p><strong>Source URL:</strong> <code>https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap</code></p>
+    <p><strong>Source:</strong> Self-hosted via <code>@font-face</code> in <code>style.css</code> — no external service requests</p>
+    <p><strong>Font files:</strong></p>
+    <ul>
+      <li><code>fonts/Roboto-Regular.woff2</code> (weight 400)</li>
+      <li><code>fonts/Roboto-Medium.woff2</code> (weight 500)</li>
+      <li><code>fonts/Roboto-Bold.woff2</code> (weight 700)</li>
+    </ul>
     <p><strong>License:</strong> Apache License, Version 2.0 (open source, free for commercial use)</p>
     <p><strong>License URL:</strong> <code>https://www.apache.org/licenses/LICENSE-2.0</code></p>
-    <p><strong>Available weights:</strong> 400 (regular), 700 (bold)</p>
+    <p><strong>Available weights:</strong> 400 (regular), 500 (medium), 700 (bold)</p>
     <p><strong>Available styles:</strong> Normal (upright) — italic not loaded</p>
-    <p><strong>Service requests:</strong> Two preconnect calls to <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>, plus one CSS request and font file requests for the weights used</p>
+    <p><strong>Service requests:</strong> None — all font files served locally from the <code>/fonts</code> directory</p>
     <p><strong>Fallback stack:</strong> <code>Roboto, "Helvetica Neue", Arial, sans-serif</code></p>
-    <p><strong>Blocking method:</strong> Rename "Roboto" to "Roboto-Blocked" in the <code>--font-body</code> and <code>--font-display</code> tokens to simulate font failure</p>
+    <p><strong>Blocking method:</strong> Rename "Roboto" to "Roboto-Blocked" in <code>--font-body</code> and <code>--font-display</code> tokens</p>
   </section>
 
   <!-- TEST RECORD                    -->
@@ -378,13 +384,13 @@
     <span class="label">Test Record</span>
     <h2>Type System Test Results</h2>
 
-    <p><strong>Test 1 — 320px viewport:</strong> Page rendered without horizontal overflow. Buttons stacked full-width via media query. Text remained legible at all scale levels. Metadata line wrapped cleanly. No clipping observed.</p>
+    <p><strong>Test 1 — 320px viewport (Roboto loaded):</strong> Page rendered with Roboto active. No horizontal overflow. Buttons stacked full-width via the 360px media query. Text legible at all scale levels. Metadata wrapped cleanly. No clipping.</p>
 
-    <p><strong>Test 2 — Wide viewport (1440px):</strong> Text measure held at 65ch via max-width token, preventing overly long line lengths. Hierarchy between heading, body, and metadata was preserved. No layout issues.</p>
+    <p><strong>Test 2 — 320px viewport (Roboto blocked, Arial fallback):</strong> When Roboto was blocked and Arial became the active font, the <code>h1</code> heading at 3.052rem overflowed the 320px viewport horizontally. Arial's wider character widths caused the heading to exceed the available width. Body text and metadata rewrapped without issue. Hierarchy was maintained in body text but the heading overflow was a defect.</p>
 
-    <p><strong>Test 3 — 200% zoom on 320px (effective 160px width):</strong> Media query at 200px breakpoint further reduced font sizes and padding. Text remained readable. Buttons stayed full-width and tappable. No overflow or clipping.</p>
+    <p><strong>Test 3 — Wide viewport (1440px):</strong> Text measure held at 65ch via <code>--measure</code> token. Hierarchy between heading, body, and metadata preserved. No layout issues in either font state.</p>
 
-    <p><strong>Test 4 — Font blocked (Roboto → Roboto-Blocked):</strong> Browser fell back to "Helvetica Neue", then Arial. Visual difference was minimal because a Network tab inspection revealed Roboto was never loading no requests to fonts.googleapis.com or fonts.gstatic.com were made. The fallback stack (Helvetica Neue → Arial) was already in use for both the default and blocked states.</p>
+    <p><strong>Test 4 — 200% zoom on 320px (effective 160px):</strong> The 200px media query breakpoint further reduced font sizes and padding. Text remained readable. Buttons stayed full-width and tappable. No overflow or clipping in either font state.</p>
   </section>
   
   <!-- EVIDENCE-BASED REVISION        -->
