@@ -70,7 +70,7 @@ Verification: Reloaded at 320px with Roboto blocked. Heading now wraps cleanly. 
   - Roboto-Regular.woff2
   - Roboto-Medium.woff2
   - Roboto-Bold.woff2
-- evidence/ (screenshots)
+- screenshots
 
 ## AI Disclosure
 
